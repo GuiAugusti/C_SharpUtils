@@ -2,7 +2,7 @@
 namespace Delegates
 
 {
-    class Program
+    class Delegates
     {
         public delegate void MathLib(float x, float y);
         static MathLib mathLib;
