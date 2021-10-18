@@ -26,6 +26,13 @@ namespace Stacks
             Console.WriteLine(myStack.Count); // Returns the stack lenght!
             Console.WriteLine(myStack.Contains(1)); // Checks if a specific element is inside the Stack! 
             myStack.Clear(); // Remove all the elements of a stack!
+
+            int[] myArray = new int[] { 1, 2, 3, 4 };
+            Stack myStack2 = new Stack(myArray); // Array to Stack!
+            foreach (int i in myStack2)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 
