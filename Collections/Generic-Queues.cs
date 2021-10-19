@@ -7,7 +7,7 @@ namespace QueuesAreEpic
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[] { 1, 2, 3 };
+            int[] arr = new int[4];
 
             Queue<int> myQueue = new Queue<int>(); // New Queue!
             myQueue.Enqueue(1); 
@@ -34,6 +34,12 @@ namespace QueuesAreEpic
 
             myQueue.Contains(2); //true
             myQueue.Contains(10); //false
+            
+            myQueue.CopyTo(arr,0); // Copys the elements of an Queue/List to a array!
+            foreach (var i in arr)
+            {
+                Console.WriteLine(i);
+            }
 
             myQueue.Clear();
 
