@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+
+namespace HarshSets
+{
+    /*C# HashSet is an unordered collection that contains unique elements. 
+     * The HashSet<T> class represents a hash set that is defined in the System.Collections.Generic namespace. 
+     * .NET HashSet class provides several methods to add items, remove items, find and search items. 
+     * The HashSet class also offers methods to compare 
+     * two objects and supports operations such as union, intersection, subset, superset, 
+     * overlap and symmetric differences.*/
+
+    // The HashSet class does not have any maximum capacity for the number
+    // of elements stored in it. This capacity keeps increasing as the number of elements are added in it.
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            HashSet<int> h = new HashSet<int>();
+            HashSet<string> h2 = new HashSet<string>();
+
+            h.Add(1);
+            h.Add(2); // Adding elements
+            h.Add(3);
+            h.Add(3); // Hashsets cannot contain duplicated elements!! 3 is not going to be add again.
+
+            h2.Add("One");
+            h2.Add("Two");  // Adding elements
+            h2.Add("Three");
+
+            foreach (var i in h)  // Reading Elements
+            {
+                Console.WriteLine(i);
+            }
+
+            h.Remove(1); // The Remove method takes the item as an input and removes it from the collection (NOT THE INDEX)
+            h.Remove(333);  // Doesn't return an error
+
+            Console.WriteLine(h.Contains(1)); // Returns FALSE since theres no element 1 inside our hashset
+
+            h.Clear(); // Clear
+
+            int[] myArray = new int[] { 1, 2, 3, 4 };
+            HashSet<int> h3 = new HashSet<int>(myArray); // adding all the elements of an array to the Harshset
+
+            // -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+        }
+    }
+}
